@@ -21,4 +21,4 @@ script:
 
 after_success:
   - echo "$DOCKERHUB_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
-  - docker push forsythetony/travis-env-var-test
+  - docker push forsythetony/travis-env-var-test:1
