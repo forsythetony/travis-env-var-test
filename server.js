@@ -5,7 +5,7 @@ function sleep(ms) {
 
 async function main() {
   while(true) {
-    console.log("Microservices rock!");
+    console.log(`The coolest dog in the world is ${process.env.COOLEST_DOG}`);
     await sleep(5000);
   }
 }

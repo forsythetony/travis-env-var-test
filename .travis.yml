@@ -16,7 +16,7 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t travis-env-var-test .
+  - docker build --build-arg COOLEST_DOG=$COOLEST_DOG -t travis-env-var-test .
   - docker tag travis-env-var-test forsythetony/travis-env-var-test:latest
 
 after_success:
