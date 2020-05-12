@@ -8,6 +8,12 @@ WORKDIR /usr/src/app
 # package.json and package-lock.json
 COPY package*.json ./
 
+# We need to do some classic hoop jumping to get
+# env variables from the Jenkins environment into the
+# actual container
+ARG COOLEST_DOG_BUILDTIME=me
+ENV COOLEST_DOG=$COOLEST_DOG_BUILDTIME
+
 # Install dependencies
 RUN npm install
 
